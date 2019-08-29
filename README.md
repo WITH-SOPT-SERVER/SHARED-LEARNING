@@ -24,3 +24,5 @@
 - 만약 하나의 키워드에 대한 상세파일을 만들고 싶다면 상위 문서에서 [상세보기] 링크를 만들어 주시기 바랍니다.
 - branch를 따로 관리하지 않으며 오로지 master만 사용합니다. 
 - 문서를 수정하고 commit를 할 때는 반드시 항목을 수정했는지 작성해주세요.
+- 모든 문서는 [마크타운](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/MarkDown.md)을 이용해서 작성합니다.
+

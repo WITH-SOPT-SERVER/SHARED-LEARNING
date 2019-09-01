@@ -34,3 +34,7 @@ Wiki를 이용해서 만들 수 도 있지만 git의 commit의 익숙해지기 �
 
 - [마크다운](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/MarkDown.md)
 - [자바스크립트](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/Javascript.md)
+
+# 참가자
+
+- 서버파트장

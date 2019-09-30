@@ -36,6 +36,14 @@
 자바스크립트에서 변수는 ```var```를 사용합니다.
 자바스크립트의 변수는 실행되는 시점에서 메모리에 할당됩니다.
 
+-- 보충 설명 --
+```var``` 이외에도 ES6 이후 ```let```과 ```const```라는 변수 선언 방법이 생김.
+위 변수 선언은 생명주기에 따른 차이점이 있다.
+```var```(function-scope): 생명주기가 함수 단위가 된다.
+
+```const```, ```let``` (block-scope): 생명주기가 {} 중괄호로 감싸진 범위가 됨.
+
+
 [목차로 돌어가기](#index)
 
 ## 데이터타입
@@ -370,7 +378,7 @@ ECMAScript를 줄여서 ES라고 부르는데 ES5는 2009년, ES6는 2015년에 
 
 위 조건을 만족하면 1급 시민의 조건을 충족합니다,
 
-- 런다임 생성이 가능하다
+- 런타임 생성이 가능하다
 - 익명으로 생성이 가능하다
 즉 위 조건까지 만족하는 함수를 1급 함수라고 할 수 있습니다.
 
@@ -426,7 +434,7 @@ function Toy(name, price) {
 	Product.call(this, name, price);
 	this.category = 'toy';
 }
-var cheesze = new Food('feta', 5);
+var cheese = new Food('feta', 5);
 var fun = new Toy('robot', 40);
 ```
 Food, Toy 함수는 각각의 this를 call 메소드를 통해서 Product로 전달하여 name과 price 속성을 지정하고 각각의 함수에서 category를 정의합니다.
@@ -452,7 +460,7 @@ fun이 호출해야 하는 인수들을 지정하는 배열객체입니다..
 #### 예제 1  배열을 붙이기 위해서 apply 사용
 ```
 var array = ['a','b'];
-var fisrt = ['a','b'];
+var first = ['a','b'];
 var second = [0,1,2];
 array.push(second);		// ['a','b',Array(3)];
 first.push.apply(first, second);
@@ -518,7 +526,7 @@ BoundThis: 감싸진 함수를 호출했을 때 항상 전달되는 값
 BoundArguments: 감싸진 함수가 호출될 때 첫번째 인수로 사용되는 값들의 목록
 Call: 이 객체와 관련된 코드 실행
 
-바인딩된 함수가 호출되면 BoudTargetFunction의 내부메소드를 call(boundThis, args)를 호출합니다. 이때 boundThis는 BoundThis이고 args는 BoundArguments입니다.
+바인딩된 함수가 호출되면 BoundTargetFunction의 내부메소드를 call(boundThis, args)를 호출합니다. 이때 boundThis는 BoundThis이고 args는 BoundArguments입니다.
 
 #### 예제 1  바인딩된 함수 생성
 ```
@@ -535,7 +543,7 @@ retrieveX(); 	// 9
 위 예제와 같이 retrieveX를 호출하면 this는 원본객체(module)를 가르키지 않습니다.  따라서 실행결과는 81이 아닌 9가 나오게 됩니다.
 이러한 경우 원본 객체를 가리키고 싶다면 bind를 활용해서 구현할 수 있습니다.
 ```
-var boundGetX = retrieceX.bind(module);
+var boundGetX = retrieveX.bind(module);
 boundGetX();	// 81
 ```
 

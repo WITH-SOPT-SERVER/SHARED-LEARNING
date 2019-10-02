@@ -1,4 +1,4 @@
-# SHARED-LEARNING
+﻿# SHARED-LEARNING
 
 25기 WITH SOPT 서버 파트 공유 학습 프로젝트
 
@@ -66,3 +66,6 @@ Wiki를 이용해서 만들 수 도 있지만 git의 commit의 익숙해지기 �
 - 양정훈
 - 양희찬
 - 양시연
+- 박형모
+- 심다은
+

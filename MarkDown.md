@@ -201,6 +201,7 @@ Text와 HTML 중간인 Markdown언어를 사용하면 쉽고 가독성 좋은 �
 ## 추가 자료
 - Visual Studio Code에서 Markdown 지원
 - [https://stackedit.io](https://stackedit.io/)을 이용하면 온라인상에서 Markdown 작업 가능
+- [https://bear.app/] 맥 OS/ios에서 사용가능한 마크다운 에디터 어플리케이션
 
 ## 출처
 - [https://thisblogbusy.tistory.com/entry/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4Markdown-%EC%9D%B4%EB%9E%80](https://thisblogbusy.tistory.com/entry/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4Markdown-%EC%9D%B4%EB%9E%80)

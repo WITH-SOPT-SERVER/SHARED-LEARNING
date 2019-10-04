@@ -72,7 +72,7 @@ Name: `upstream`
 
 Unstaged Files는  변경사항이 git에서 등록되지 않은 상태이며 Staged Files는 commit을 통해서 push를 할 준비가 된 변경사항들입니다.
 
-Unstaged Files에서 commit할 파일을 선택하시고 오측 상단에 Stage * file를 클릭해주시면 됩니다.
+Unstaged Files에서 commit할 파일을 선택하시고 우측 상단에 Stage * file를 클릭해주시면 됩니다.
 
 ![screenSh](./img/img-gitkraken-stage-select.png)
 
@@ -84,7 +84,7 @@ Unstaged Files에서 commit할 파일을 선택하시고 오측 상단에 Stage 
 
 ![screenSh](./img/img-gitkraken-commit-apply.png)
 
-새로운 커밋이 추가도니 것을 확인할 수 있습니다.
+새로운 커밋이 추가되는 것을 확인할 수 있습니다.
 그리고 상단에 push 버튼을 누르면 원격 Repo로 변경사항이 적용됩니다.
 
 - REMOTE에서 최신 버전 Pull 하기
@@ -94,6 +94,6 @@ Unstaged Files에서 commit할 파일을 선택하시고 오측 상단에 Stage 
 
 merge A into B라는 항목을 확인할 수 있는데
 A에 정보를 B에 합친다는 merge명령어를 의미합니다.
-이를 실행하면 서버에 적용된 변경사랑을 LOCAL에도 적용시킬 수 있습니다.
+이를 실행하면 서버에 적용된 변경사항을 LOCAL에도 적용시킬 수 있습니다.
 
 

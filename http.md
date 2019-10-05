@@ -3,7 +3,7 @@
 ## index
 
 -   [HTTP란](#HTTP-란)
--   [HTTP의 특징] (#HTTP의-특징)
+-   [HTTP의 특징](#HTTP의-특징)
 -   [HTTP의 종류](#HTTP의-종류)
 -   [GET Method](#GET-METHOD)
 -   [POST Method](#POST-METHOD)

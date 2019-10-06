@@ -33,6 +33,7 @@ Wiki를 이용해서 만들 수 도 있지만 git의 commit의 익숙해지기 �
 - [마크다운](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/MarkDown.md)
 - [자바스크립트](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/Javascript.md)
 - [Postman 자동화](./PostmanTestsScript.md)
+- [HTTP](./http.md)
 
 # 참가자
 

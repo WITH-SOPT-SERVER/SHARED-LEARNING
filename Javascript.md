@@ -31,14 +31,14 @@
 
 실행하는 시점에서 실행되는 동적언어입니다.
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 변수
 
 자바스크립트에서 변수는 `var`를 사용합니다.
 자바스크립트의 변수는 실행되는 시점에서 메모리에 할당됩니다.
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 데이터타입
 
@@ -91,7 +91,7 @@ var addFunc = function (a, b) {
 };
 ```
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 동적언어와 정적언어
 
@@ -115,7 +115,7 @@ C언어, JAVA등이 대표적인 정적언어입니다.
 
 ### 동적언어/타입 (인터프리터)
 
-javascript, python등이 개표적인 동적언어입니다.
+javascript, python등이 대표적인 동적언어입니다.
 동적 언어는 컴파일이라는 과정없이 바로 실행됩니다.
 동적 타입은 실행하는 시점에서 자료형을 결정합니다
 
@@ -132,7 +132,7 @@ javascript, python등이 개표적인 동적언어입니다.
 > **동적언어를 쓰는 이유**
 > 프로그램 성능상으로는 정적언어가 우수합니다. 하지만 최근 컴퓨터, 서버, 하드웨어의 비용이 저렴해지면서 실행속도 자체보다 개발속도가 더 중요하게 되었다. 이러한 이유로 동적언어가 많이 쓰이고 있습니다.
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 객체지향 언어의 2줄기
 
@@ -210,7 +210,7 @@ console.log(foo.id) // .연산자를 이용하여 foo 객체의 id 프로퍼티 
 #### 1. Built-in Object
 
 Built-in Object는 자바스크립트 내장객체입니다.
-여기에는 Global, Object, String, Number, Boolean, Date, Array, Math, RegExp, Error이 입니다.
+여기에는 Global, Object, String, Number, Boolean, Date, Array, Math, RegExp, Error이 있습니다.
 
 #### 2. Native Object
 
@@ -231,7 +231,7 @@ BOM(브라우저 객체 모델), DOM(문서 객체 모델)등이 이에 속합�
 
 [자세히보기(프로터타입)](http://tcpschool.com/javascript/js_object_prototype)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 리터럴 표기법
 
@@ -254,11 +254,11 @@ var obj = {name: "sopt", age: 25};
 ```
 
 객체를 생성한 후에 값을 담는 것이 아니라 코드 자체가 값을 의미합니다.
-리터럴 표기법의 장점은 **코드가 짧아지면** , 인터프리터가 **해석해야 하는 양이 줄어**들어드는 장점이 있습니다.
+리터럴 표기법의 장점은 **코드가 짧아지면** , 인터프리터가 **해석해야 하는 양이 줄어**든다는 장점이 있습니다.
 
 [자세히보기](https://enarastudent.tistory.com/entry/자바스크립트-객체-생성과-리터럴-표기법)
 [참고1](https://webclub.tistory.com/390)
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 스코프
 
@@ -296,7 +296,7 @@ bar();
 
 [자세히 보기](https://edu.goorm.io/1.0/learn/lecture/557/바로-실행해보면서-배우는-node-js/lesson/226443/스코프와-호이스팅)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 호이스팅
 
@@ -330,7 +330,7 @@ function foo() {
 
 [자세히 보기](https://edu.goorm.io/1.0/learn/lecture/557/바로-실행해보면서-배우는-node-js/lesson/226443/스코프와-호이스팅)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 클로저
 
@@ -406,7 +406,7 @@ mjID.getID();
 [자세히 보기1](https://medium.com/@khwsc1/%EB%B2%88%EC%97%AD-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%8A%A4%EC%BD%94%ED%94%84%EC%99%80-%ED%81%B4%EB%A1%9C%EC%A0%80-javascript-scope-and-closures-8d402c976d19)
 [자세히 보기2](http://chanlee.github.io/2013/12/10/understand-javascript-closure/)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 에크마스크립트
 
@@ -416,7 +416,7 @@ ECMAScript는 자바스크립트를 이루는 코어 스크립트입니다.
 
 ECMAScript를 줄여서 ES라고 부르는데 ES5는 2009년, ES6는 2015년에 만들어져 널리 사용중이다.
 [자세히보기](https://takeuu.tistory.com/93)
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 고차원함수
 
@@ -438,7 +438,7 @@ ECMAScript를 줄여서 ES라고 부르는데 ES5는 2009년, ES6는 2015년에 
 
 하나 이상의 함수를 인수로 받거나 함수를 결과로 반환하는 함수를 고차원 함수라고 부릅니다.
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 함수호출
 
@@ -694,22 +694,22 @@ function compose(f, g){
 
 [자세히보기](https://velog.io/@rohkorea86/this-%EC%99%80-callapplybind-%ED%95%A8%EC%88%98-mfjpvb9yap)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 순수성, 불변성
 
 (추후 업데이트)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 흐름기반
 
 (추후 업데이트)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 언더스코어
 
 (추후 업데이트)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)

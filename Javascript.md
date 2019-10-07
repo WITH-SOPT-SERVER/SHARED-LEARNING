@@ -514,7 +514,7 @@ first.push.apply(first, second);
 console.log(first);		//['a','b',0,1,2];
 ```
 
-array의 경우 일반 push를 하년 경우 배열 내부에 배열이 만들어 집니다.
+array의 경우 일반 push를 하는 경우 배열 내부에 배열이 만들어 집니다.
 이 결과가 원하는 동작이 아니라면 first와 같이 apply를 이용해서 구현할 수 있습니다.
 push 함수의 주체를 first로 지정하고 함수가 호출해야 하는 인수를 second로 지정하여서 배열 붙이는 기능을 구현했습니다.
 

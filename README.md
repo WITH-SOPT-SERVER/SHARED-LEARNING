@@ -1,4 +1,4 @@
-# SHARED-LEARNING
+﻿# SHARED-LEARNING
 
 25기 WITH SOPT 서버 파트 공유 학습 프로젝트
 
@@ -30,16 +30,32 @@ Wiki를 이용해서 만들 수 도 있지만 git의 commit의 익숙해지기 �
 
 # 최상위 개념
 
--   [마크다운](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/MarkDown.md)
--   [자바스크립트](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/Javascript.md)
+- [마크다운](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/MarkDown.md)
+- [자바스크립트](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/Javascript.md)
+- [Postman 자동화](./PostmanTestsScript.md)
+- [HTTP](./http.md)
 
 # 참가자
 
-- 서버파트장
+- 윤희성
+- 박주연
+- 손예지
+- 김해리
+- 허정민
+- 유희수
+- 박승완
+- 황채연
+- 윤혁
+- 김민준
+- 강영우
+- 조수민
+- 양희연
+- 이소연
+- 박경선
+- 조하담
+- 최소영
 - 남궁권
 - 신정아
-- 이소희
-- 이재현
 - 신윤재
 - 박시현
 - 지현이
@@ -50,4 +66,13 @@ Wiki를 이용해서 만들 수 도 있지만 git의 commit의 익숙해지기 �
 - 이시연
 - 이소희
 - 이재현
+- 김강희
+- 김채린
 - 양정훈
+- 양희찬
+- 양시연
+- 박형모
+- 심다은
+- 이호진
+- 제갈윤
+- 이재용

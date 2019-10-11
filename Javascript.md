@@ -31,7 +31,7 @@
 
 실행하는 시점에서 실행되는 동적언어입니다.
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 변수
 
@@ -70,7 +70,7 @@ var data;
 console.log(data)	//null
 ```
 
-※ 자바스크립트는 인터프리트 언어로 실행되는 시점에 메모리에 할당됩니다. 따라서 메모리에 할당되기 전은 undefined, 할당된 이후는 null으로 분류됩니다.
+※ 자바스크립트는 인터프리터 언어로 실행되는 시점에 메모리에 할당됩니다. 따라서 메모리에 할당되기 전은 undefined, 할당된 이후는 null으로 분류됩니다.
 
 ### 배열
 
@@ -99,7 +99,7 @@ var addFunc = function (a, b) {
 };
 ```
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 동적언어와 정적언어
 
@@ -123,7 +123,7 @@ C언어, JAVA등이 대표적인 정적언어입니다.
 
 ### 동적언어/타입 (컴파일)
 
-javascript, python등이 개표적인 동적언어입니다.
+javascript, python등이 대표적인 동적언어입니다.
 동적 언어는 컴파일이라는 과정없이 바로 실행됩니다.
 동적 타입은 실행하는 시점에서 자료형을 결정합니다
 
@@ -140,7 +140,7 @@ javascript, python등이 개표적인 동적언어입니다.
 > **동적언어를 쓰는 이유**
 > 프로그램 성능상으로는 정적언어가 우수합니다. 하지만 최근 컴퓨터, 서버, 하드웨어의 비용이 저렴해지면서 실행속도 자체보다 개발속도가 더 중요하게 되었다. 이러한 이유로 동적언어가 많이 쓰이고 있습니다.
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 객체지향 언어의 2줄기
 
@@ -155,7 +155,7 @@ javascript, python등이 개표적인 동적언어입니다.
 ### 프로토타입 기반 언어
 
 프로토타입 기반 언어에서는 **클래스라는 개념이 존재하지 않습니다**.
-대신 여러 종휴의 Built-in 객체들이 시스템 상에 존재하게 됩니다.
+대신 여러 종류의 Built-in 객체들이 시스템 상에 존재하게 됩니다.
 또한 객체 원형의 위임 과정을 통해 상속 과정이 구현됩니다.
 
 [자세히 보기](http://mohwa.github.io/blog/javascript/2015/10/16/prototype/)
@@ -207,7 +207,7 @@ console.log(foo.id) // .연산자를 이용하여 foo 객체의 id 프로퍼티 
 #### 1. Built-in Object
 
 Built-in Object는 자바스크립트 내장객체입니다.
-여기에는 Global, Object, String, Number, Boolean, Date, Array, Math, RegExp, Error이 입니다.
+여기에는 Global, Object, String, Number, Boolean, Date, Array, Math, RegExp, Error 가 있습니다.
 
 #### 2. Native Object
 
@@ -228,7 +228,7 @@ BOM(브라우저 객체 모델), DOM(문서 객체 모델)등이 이에 속합�
 
 [자세히보기(프로터타입)](http://tcpschool.com/javascript/js_object_prototype)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 리터럴 표기법
 
@@ -255,7 +255,7 @@ var obj = {name: "sopt", age: 25};
 
 [자세히보기](https://enarastudent.tistory.com/entry/자바스크립트-객체-생성과-리터럴-표기법)
 [참고1](https://webclub.tistory.com/390)
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 스코프
 
@@ -697,22 +697,22 @@ function compose(f, g){
 
 [자세히보기](https://velog.io/@rohkorea86/this-%EC%99%80-callapplybind-%ED%95%A8%EC%88%98-mfjpvb9yap)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 순수성, 불변성
 
 (추후 업데이트)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 흐름기반
 
 (추후 업데이트)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)
 
 ## 언더스코어
 
 (추후 업데이트)
 
-[목차로 돌어가기](#index)
+[목차로 돌아가기](#index)

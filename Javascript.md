@@ -57,9 +57,9 @@ var bool = true
 null, undefined의 추가적인 데이터 타입이 있습니다.
 
 ```
-console.log(data)	//undefined
+console.log(data);	//undefined
 var data;
-console.log(data)	//null
+console.log(data);	//null
 ```
 
 ※ 자바스크립트는 인터프리트 언어로 실행되는 시점에 메모리에 할당됩니다. 따라서 메모리에 할당되기 전은 undefined, 할당된 이후는 null으로 분류됩니다.

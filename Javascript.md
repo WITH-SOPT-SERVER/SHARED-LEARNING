@@ -38,6 +38,13 @@
 자바스크립트에서 변수는 `var`를 사용합니다.
 자바스크립트의 변수는 실행되는 시점에서 메모리에 할당됩니다.
 
+-- 보충 설명 --
+```var``` 이외에도 ES6 이후 ```let```과 ```const```라는 변수 선언 방법이 생김.
+위 변수 선언은 생명주기에 따른 차이점이 있다.
+```var```(function-scope): 생명주기가 함수 단위가 된다.
+
+```const```, ```let``` (block-scope): 생명주기가 {} 중괄호로 감싸진 범위가 됨.
+
 [목차로 돌아가기](#index)
 
 ## 데이터타입
@@ -211,7 +218,8 @@ console.log(foo.id) // .연산자를 이용하여 foo 객체의 id 프로퍼티 
 #### 1. Built-in Object
 
 Built-in Object는 자바스크립트 내장객체입니다.
-여기에는 Global, Object, String, Number, Boolean, Date, Array, Math, RegExp, Error이 있습니다.
+
+여기에는 Global, Object, String, Number, Boolean, Date, Array, Math, RegExp, Error 가 있습니다.
 
 #### 2. Native Object
 
@@ -431,9 +439,9 @@ ECMAScript를 줄여서 ES라고 부르는데 ES5는 2009년, ES6는 2015년에 
 
 위 조건을 만족하면 1급 시민의 조건을 충족합니다,
 
--   런타임 생성이 가능하다
--   익명으로 생성이 가능하다
-    즉 위 조건까지 만족하는 함수를 1급 함수라고 할 수 있습니다.
+- 런타임 생성이 가능하다
+- 익명으로 생성이 가능하다
+즉 위 조건까지 만족하는 함수를 1급 함수라고 할 수 있습니다.
 
 ### 고차원함수
 
@@ -490,7 +498,7 @@ function Toy(name, price) {
 	Product.call(this, name, price);
 	this.category = 'toy';
 }
-var cheesze = new Food('feta', 5);
+var cheese = new Food('feta', 5);
 var fun = new Toy('robot', 40);
 ```
 
@@ -519,7 +527,7 @@ fun이 호출해야 하는 인수들을 지정하는 배열객체입니다..
 
 ```
 var array = ['a','b'];
-var fisrt = ['a','b'];
+var first = ['a','b'];
 var second = [0,1,2];
 array.push(second);		// ['a','b',Array(3)];
 first.push.apply(first, second);
@@ -588,7 +596,7 @@ BoundThis: 감싸진 함수를 호출했을 때 항상 전달되는 값
 BoundArguments: 감싸진 함수가 호출될 때 첫번째 인수로 사용되는 값들의 목록
 Call: 이 객체와 관련된 코드 실행
 
-바인딩된 함수가 호출되면 BoudTargetFunction의 내부메소드를 call(boundThis, args)를 호출합니다. 이때 boundThis는 BoundThis이고 args는 BoundArguments입니다.
+바인딩된 함수가 호출되면 BoundTargetFunction의 내부메소드를 call(boundThis, args)를 호출합니다. 이때 boundThis는 BoundThis이고 args는 BoundArguments입니다.
 
 #### 예제 1 바인딩된 함수 생성
 
@@ -608,7 +616,7 @@ retrieveX(); 	// 9
 이러한 경우 원본 객체를 가리키고 싶다면 bind를 활용해서 구현할 수 있습니다.
 
 ```
-var boundGetX = retrieceX.bind(module);
+var boundGetX = retrieveX.bind(module);
 boundGetX();	// 81
 ```
 
@@ -696,7 +704,6 @@ function compose(f, g){
 [자세히보기](https://velog.io/@rohkorea86/this-%EC%99%80-callapplybind-%ED%95%A8%EC%88%98-mfjpvb9yap)
 
 [목차로 돌아가기](#index)
-
 
 ## 순수성, 불변성
 

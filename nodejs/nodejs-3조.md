@@ -8,7 +8,7 @@
 
 # Index
 - [Node.js 배경](#NODE.JS-배경)
-- [Node.js 란](#NODE.JS-란)
+- [Node.js 란](#NODE.JS-개념)
 - [Node.js 구조](#NODE.JS-구조)
 - [Node.js 특징](#NODE.JS-특징)
 - [Node.js 장단점](#NODE.JS-장단점)
@@ -40,7 +40,7 @@
 
 [목록으로](#INDEX)
 
-# Node.js의 장단점
+# Node.js 장단점
 
 ## Node.js의 장점
 

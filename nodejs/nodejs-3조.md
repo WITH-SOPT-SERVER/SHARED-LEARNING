@@ -7,11 +7,11 @@
 > 내용의 출처 링크를 꼭 남겨주세요!!
 
 # Index
-- [Node.js 배경](#Node.js-배경)
-- [Node.js 란](#Node.js-개념)
-- [Node.js 구조](#Node.js-구조)
-- [Node.js 특징](#Node.js-특징)
-- [Node.js 장단점](#Node.js-장단점)
+- [Node.js 배경](#nodejs-배경)
+- [Node.js 란](#nodejs-개념)
+- [Node.js 구조](#nodejs-구조)
+- [Node.js 특징](#nodejs-특징)
+- [Node.js 장단점](#nodejs-장단점)
 - [NPM](#Node-Packaged-Manager)
 - (자유롭게 추가 가능)
 - [참가자](#참가자)

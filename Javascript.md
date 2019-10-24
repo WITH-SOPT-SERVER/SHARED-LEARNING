@@ -38,6 +38,13 @@
 자바스크립트에서 변수는 `var`를 사용합니다.
 자바스크립트의 변수는 실행되는 시점에서 메모리에 할당됩니다.
 
+-- 보충 설명 --
+```var``` 이외에도 ES6 이후 ```let```과 ```const```라는 변수 선언 방법이 생김.
+위 변수 선언은 생명주기에 따른 차이점이 있다.
+```var```(function-scope): 생명주기가 함수 단위가 된다.
+
+```const```, ```let``` (block-scope): 생명주기가 {} 중괄호로 감싸진 범위가 됨.
+
 [목차로 돌아가기](#index)
 
 ## 데이터타입
@@ -62,7 +69,7 @@ var data;
 console.log(data);	//null
 ```
 
-※ 자바스크립트는 인터프리트 언어로 실행되는 시점에 메모리에 할당됩니다. 따라서 메모리에 할당되기 전은 undefined, 할당된 이후는 null으로 분류됩니다.
+※ 자바스크립트는 인터프리터 언어로 실행되는 시점에 메모리에 할당됩니다. 따라서 메모리에 할당되기 전은 undefined, 할당된 이후는 null으로 분류됩니다.
 
 ### 배열
 
@@ -95,7 +102,7 @@ var addFunc = function (a, b) {
 
 ## 동적언어와 정적언어
 
-프로그랭 언어는 크게 정적언어(컴파일 언어)와 동적언어(인터프리터)로 구분됩니다.
+프로그래밍 언어는 크게 정적언어(컴파일 언어)와 동적언어(인터프리터)로 구분됩니다.
 
 ### 정적언어/타입 (컴파일)
 
@@ -117,7 +124,8 @@ C언어, JAVA등이 대표적인 정적언어입니다.
 
 javascript, python등이 대표적인 동적언어입니다.
 동적 언어는 컴파일이라는 과정없이 바로 실행됩니다.
-동적 타입은 실행하는 시점에서 자료형을 결정합니다
+동적 타입은 실행하는 시점에서 자료형을 결정합니다.
+같은 변수에 여러 타입이 들어갈 수 있습니다.
 
 #### 장점
 
@@ -186,6 +194,16 @@ console.log(foo.id) // .연산자를 이용하여 foo 객체의 id 프로퍼티 
 
 여기서 주의해야하는 점 한가지가 프로퍼티의 삭제는 반드시 delete라는 키워드를 사용해야 합니다. 즉 undefined나 null을 할당한다고 삭제되지 않습니다.
 
+#### 프로퍼티의 2가지 종류
+
+- instance property
+
+   특정 object 인스턴스의 특정 데이터를 갖고 있다. 
+
+- static property
+
+   모든 object 인스턴스들에게 공유된 데이터를 갖고 잇다. 
+
 ### 메소드
 
 **메소드는 객체가 가지고있는 동작**입니다.
@@ -200,7 +218,8 @@ console.log(foo.id) // .연산자를 이용하여 foo 객체의 id 프로퍼티 
 #### 1. Built-in Object
 
 Built-in Object는 자바스크립트 내장객체입니다.
-여기에는 Global, Object, String, Number, Boolean, Date, Array, Math, RegExp, Error이 있습니다.
+
+여기에는 Global, Object, String, Number, Boolean, Date, Array, Math, RegExp, Error 가 있습니다.
 
 #### 2. Native Object
 
@@ -249,6 +268,27 @@ var obj = {name: "sopt", age: 25};
 [자세히보기](https://enarastudent.tistory.com/entry/자바스크립트-객체-생성과-리터럴-표기법)
 [참고1](https://webclub.tistory.com/390)
 [목차로 돌아가기](#index)
+
+## 템플릿 문자열 (백틱, ‘)
+
+자바스크립트는 템플릿 문자열을 지원합니다. 백틱을 쓰는 문자열을 템플릿 문자열 이라고 합니다.</br>
+문자열에서 '변수'를 사용하는 경우, 템플릿 문자열을 이용하여 문자열을 '백틱’ 으로 감싸면 하나의 문자열로 인식합니다. 
+
+```
+a = "SOPT"
+b = 1
+c = [1,2,3]
+ 
+const d = a + '서버 파트 입니다.'  + b + '+' + c;
+ 
+// 템플릿 문자열 적용
+const d = ‘${a} 서버 파트 입니다. ${b} + ${c}‘;
+```
+
+* 템플릿 문자열로 표현하면 
+1. 변수를 쓰는 문자열에서 여러개의 따옴표와 +기호를 쓰지 않아도 되기 때문에 보기 좋으며, 
+2. 문자열 내부에서 기호를 사용 할 때 이스케이핑  문자( ex. \’ \”  )를 쓰지 않아도 된다는 장점이 있습니다. 
+
 
 ## 스코프
 
@@ -420,9 +460,9 @@ ECMAScript를 줄여서 ES라고 부르는데 ES5는 2009년, ES6는 2015년에 
 
 위 조건을 만족하면 1급 시민의 조건을 충족합니다,
 
--   런타임 생성이 가능하다
--   익명으로 생성이 가능하다
-    즉 위 조건까지 만족하는 함수를 1급 함수라고 할 수 있습니다.
+- 런타임 생성이 가능하다
+- 익명으로 생성이 가능하다
+즉 위 조건까지 만족하는 함수를 1급 함수라고 할 수 있습니다.
 
 ### 고차원함수
 
@@ -479,7 +519,7 @@ function Toy(name, price) {
 	Product.call(this, name, price);
 	this.category = 'toy';
 }
-var cheesze = new Food('feta', 5);
+var cheese = new Food('feta', 5);
 var fun = new Toy('robot', 40);
 ```
 
@@ -508,14 +548,14 @@ fun이 호출해야 하는 인수들을 지정하는 배열객체입니다..
 
 ```
 var array = ['a','b'];
-var fisrt = ['a','b'];
+var first = ['a','b'];
 var second = [0,1,2];
 array.push(second);		// ['a','b',Array(3)];
 first.push.apply(first, second);
 console.log(first);		//['a','b',0,1,2];
 ```
 
-array의 경우 일반 push를 하년 경우 배열 내부에 배열이 만들어 집니다.
+array의 경우 일반 push를 하는 경우 배열 내부에 배열이 만들어 집니다.
 이 결과가 원하는 동작이 아니라면 first와 같이 apply를 이용해서 구현할 수 있습니다.
 push 함수의 주체를 first로 지정하고 함수가 호출해야 하는 인수를 second로 지정하여서 배열 붙이는 기능을 구현했습니다.
 
@@ -577,7 +617,7 @@ BoundThis: 감싸진 함수를 호출했을 때 항상 전달되는 값
 BoundArguments: 감싸진 함수가 호출될 때 첫번째 인수로 사용되는 값들의 목록
 Call: 이 객체와 관련된 코드 실행
 
-바인딩된 함수가 호출되면 BoudTargetFunction의 내부메소드를 call(boundThis, args)를 호출합니다. 이때 boundThis는 BoundThis이고 args는 BoundArguments입니다.
+바인딩된 함수가 호출되면 BoundTargetFunction의 내부메소드를 call(boundThis, args)를 호출합니다. 이때 boundThis는 BoundThis이고 args는 BoundArguments입니다.
 
 #### 예제 1 바인딩된 함수 생성
 
@@ -597,7 +637,7 @@ retrieveX(); 	// 9
 이러한 경우 원본 객체를 가리키고 싶다면 bind를 활용해서 구현할 수 있습니다.
 
 ```
-var boundGetX = retrieceX.bind(module);
+var boundGetX = retrieveX.bind(module);
 boundGetX();	// 81
 ```
 
@@ -688,18 +728,173 @@ function compose(f, g){
 
 ## 순수성, 불변성
 
-(추후 업데이트)
+순수성 : 
+- 오직 인자를 이용해서 결과값이 만들어집니다
+- 상태 변이가 자유롭다면 조립과정에 문제가 생깁니다
+- 순수 함수를 사용하여 다른 함수로 쉽게 교체가 가능하고 결과값을 예측합니다
+- Date.now, console.log, this 일부 전역 변수 등은 자바스크립트에서 비순수성을 야기하는 메서드와 함수입니다.
+- 자바 스크립트는 객체 레퍼런스를 전달하므로 객체나 배열을 인자로 받는 함수는 잠재적으로 비순수성을 일으킬 수 있습니다.
+
+```
+function generateRandomCharacter() { //비순수
+	return rand(26).toString(36);
+}
+
+function generateString(charGen, len){ //순수
+	return repeatedly(len, charGen).join('');
+}
+
+```
+
+불변성(Immutability):
+
+객체가 생성된 이후 그 상태를 변경할 수 없는 디자인 패턴입니다. Immutability은 함수형 프로그래밍의 핵심 원리이다.
+
+객체는 참조(reference) 형태로 전달하고 전달 받습니다. 객체가 참조를 통해 공유되어 있다면 그 상태가 언제든지 변경될 수 있기 때문에 문제가 될 가능성도 커지게 됩니다. 이는 객체의 참조를 가지고 있는 어떤 장소에서 객체를 변경하면 참조를 공유하는 모든 장소에서 그 영향을 받기 때문인데 이것이 의도한 동작이 아니라면 참조를 가지고 있는 다른 장소에 변경 사실을 통지하고 대처하는 추가 대응이 필요합니다.
+
+```
+var statement = 'I am an immutable value'; // string은 immutable value
+
+var otherStr = statement.slice(8, 17);
+
+console.log(otherStr);   // 'immutable'
+console.log(statement);  // 'I am an immutable value'
+```
+
+2행에서 Stirng 객체의 slice() 메소드는 statement 변수에 저장된 문자열을 변경하는 것이 아니라 사실은 새로운 문자열을 생성하여 반환하고 있습니다. 그 이유는 문자열은 변경할 수 없는 immutable value이기 때문입니다.
+
+```
+var arr = [];
+console.log(arr.length); // 0
+
+var v2 = arr.push(2);    // arr.push()는 메소드 실행 후 arr의 length를 반환
+console.log(arr.length); // 1
+```
+
+상기 예제에서 v2의 값은 무엇인가? 문자열의 예와 같이 배열이 동작한다면 v2는 새로운 배열(하나의 요소를 가지고 그 값은 2인)을 가지게 될 것입니다. 그러나 객체인 arr은 push 메소드에 의해 update되고 v2에는 배열의 새로운 length 값이 반환됩니다.
+
+[자세히보기](https://poiemaweb.com/js-immutability)
 
 [목차로 돌아가기](#index)
 
 ## 흐름기반
+체이닝 패턴 :
+객체에 연쇄적으로 메서드를 호출할 수 있도록 하는 패턴입니다
+```
+var Test = function() { //메서드 체이닝을 위한 this호출
+    this.x = 0;
+    this.y = 0;
+    this.z = 0;
+};
+ 
+Test.prototype.setX = function(x) {
+    this.x = x;
+    return this;
+};
+ 
+Test.prototype.setY = function(y) {
+    this.y = y;
+    return this;
+};
+ 
+Test.prototype.setZ = function(z) {
+    this.z = z;
+    return this;
+};
+ 
+// 메소드 체이닝 패턴을 이용한 set 호출
+var element = new Test();
+element.setX(1).setY(2).setZ(3);
+ 
+// Test {x : 1, y : 2, z : 3}
+console.log(element);
 
-(추후 업데이트)
+```
 
 [목차로 돌아가기](#index)
 
 ## 언더스코어
 
-(추후 업데이트)
+UNDERSCORE.JS(이하 언더스코어)는 자바스크립트 유틸리티(여러가지 편의를 도와주는) 라이브러리 입니다. 언더스코어라는 이름이 의미하는 바와 같이 언더스코어는 모든 함수들을 '_' 를 사용합니다. jQuery가 $를 사용하는 것과 같습니다. 자바스크립트에서 함수형 페러다임을 잘 보여줍니다.
+
+```
+var list = [1, 2, 3, 4, 5, 6];
+_.reject(list, function(num) { return num % 2 == 0; });
+// [1, 3, 5]
+console.log(list);
+// [1, 2, 3, 4, 5, 6]
+
+_.contains([1, 2, 3], 3);
+// true
+
+_.isArray([1, 2, 3]);
+// true
+```
+
+_.reject는 list를 받아 predicate를 실행하여 true이면 제외합니다. 그리고 남아 있는 값들만 담긴 새로운 list를 리턴합니다('새로운'이 중요).
+
+_.contains는 첫 번째 인자인 배열에 두 번째 인자와 동일한 값이 포함되어 있는지를 true/false로 리턴 
+
+_.isArray는 객체의 type이 Array가 맞는지를 검사한다. IE9 미만에서는 Array.isArray가 없어서 _.isArray가 필요합니다.
+
+
+```
+var users = [
+  { id: 1, name: "ID", age: 32 },
+  { id: 2, name: "HA", age: 25 },
+  { id: 3, name: "BJ", age: 32 },
+  { id: 4, name: "PJ", age: 28 },
+  { id: 5, name: "JE", age: 27 },
+  { id: 6, name: "JM", age: 32 },
+  { id: 7, name: "HI", age: 24 }
+];
+_.pluck(users, 'name');
+// ["ID", "HA", "BJ", "PJ", "JE", "JM", "HI"]
+
+_.first([5, 4, 3, 2, 1]);
+// 5
+_.first([5, 4, 3, 2, 1], 1);
+// [5]
+_.first([5, 4, 3, 2, 1], 2);
+// [5, 4]
+
+_.last([5, 4, 3, 2, 1]);
+// 1
+_.last([5, 4, 3, 2, 1], 1);
+// [1]
+_.last([5, 4, 3, 2, 1], 2);
+// [2, 1]
+
+_.rest([5, 4, 3, 2, 1]);
+// [4, 3, 2, 1]
+_.rest([5, 4, 3, 2, 1], 2);
+// [3, 2, 1]
+
+_.initial([5, 4, 3, 2, 1]);
+// [5, 4, 3, 2]
+_.initial([5, 4, 3, 2, 1], 2);
+// [5, 4, 3]
+
+_.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+// 4
+_.lastIndexOf([1, 2, 3, 1, 2, 3], 3);
+// 5
+_.lastIndexOf([1, 2, 3, 1, 3], 2);
+// 1
+
+_.flatten([[1, 2, 3], [4, 5], 6]);
+// [1, 2, 3, 4, 5, 6]
+```
+_.pluck는 users처럼 배열 내부의 값들이 key/value 쌍으로 구성된 객체일 때 사용합니다. 두 번째 인자로 넘긴 key에 해당하는 value를 모아서 리턴합니다. 안쪽에 있는 값들을 짧은 코드로 뽑아 낼 수 있어 유용합니다. 역시 기존의 users의 내용을 바꾸는 것이 아닌 새로운 list를 만들어 값을 담습니다.
+
+_.first(list)는 list[0]와 같고 _.last(list)는 list[list.length-1]와 같습니다. list[0]과 같이 key로 접근하면 되는 일을 굳이 함수로 만들 필요가 있을까 싶을 수 있지만, 사소한 것도 함수로 만들어 두면 조합성이 생기고 실행 시점을 다룰 수 있는 등의 이점이 있습니다. _.first와 _.last의 두 번째 인자는 앞이나 뒤에서부터 몇 개를 남길 것인지에 대한 옵션입니다.
+
+_.rest는 앞쪽의 값을 제외한 새로운 리스트를 리턴합니다. 두 번째 인자는 몇 개의 값을 제외할 것인지에 대한 옵션입니다. _.initial은 _.rest의 반대 방향으로 동작합니다.
+
+_.lastIndexOf는 뒤에서부터 동일한 값을 찾아 index를 리턴한다. 뒤에서부터 세는 것이 아니라 뒤에서부터 찾습니다.
+
+_.flatten은 깊이를 가진 배열을 펴주는 함수입니다.
+
+[자세히보기](https://github.com/indongyoo/functional-javascript/wiki/3.1-Underscore.js-%EC%86%8C%EA%B0%9C)
 
 [목차로 돌아가기](#index)

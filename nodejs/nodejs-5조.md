@@ -28,10 +28,14 @@
 
 콜백을 담는 별도의 큐와 이것을 처리하기 위한 이벤트 루프가 자바스크립트 외부에 존재하는 등 브라우저와 비슷한 구조를 보인다. node.js 에서는 비동기 실행을 위해 libuv 라이브러리를 사용하며, libuv 가 이벤트 루프를 제공한다. 자바스크립트 엔진은 비동기 작업을 위해 node.js api 를 호출하며, 이때 넘겨받은 콜백은 libuv의 이벤트 루프를 통해 스케쥴되고, 실행된다.
 
+
 <img src = "https://pbs.twimg.com/media/Bt5ywJrIEAAKJQt.jpg"> </img>
+
 코드를 실행할 때 동기적으로 처리되는 함수들은 자바스크립트엔진 내의 호출 스택(call stack)에 쌓여 하나씩 실행되지만, 비동기로 실행되는 함수는 node api 를 통해 libuv 에 바인딩되어 libuv에 넘겨지게 되고, libuv 내의 스레드풀에서 처리되어 나온 결과는 콜백 함수에 담겨 이벤트 큐에 쌓이게 된다.
 
+
 <img src = "http://4.bp.blogspot.com/-MYY3w4Y_lAg/VCHi63G4DGI/AAAAAAAAA3c/FrbGjnJbPnQ/s1600/event_loop.jpg"> </img>
+
 이벤트 큐에 쌓인 콜백 함수들은 바로 사용되는 것이 아니라 자바스크립트엔진에 있는 호출 스택(call stack)이 비어 있을 경우에 이벤트 루프가 이벤트 큐에서 함수를 하나 가져와 호출 스택(call stack)에 쌓게되면서 실행이 된다.
 
 

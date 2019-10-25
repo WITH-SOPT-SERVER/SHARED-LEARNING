@@ -1,3 +1,4 @@
+
 # Node.js 정리 프로젝트
 
 # Index
@@ -82,12 +83,28 @@ I/O 작업을 진행하는 동안 유저 프로세스의 작업을 중단시키�
 
 # Node Packaged Manager
 
+NPM은 node.js 기반의 모듈들을 모아둔 집합으로, node.js 패키지를 관리하는 패키지 매니저이기도 하다. 즉 NPM은 Node.js에서 사용할 수 있는 모듈들을 패키지화하여 모아둔 저장소 역할과 패키지 설치 및 관리를 위한 CLI(Command line interface)를 제공한다. 
+
+참고로 모듈은 프로젝트를 진행하면서 사용할 수 있는 자바 스크립트 라이브러리로, 패키지는 이러한 모듈들 중에서 필요로 하는 모든 파일들을 포함한 개념이다. 이러한 패키지들을 적절하게 활용하기 위해 도움을 주는 것이 NPM의 역할이라고 볼 수 있다.
+
+npm으로 패키지를 설치하는 방법은 기본적으로  `` npm install package명 `` 이다. 여기서 전역으로 설치하려면 install 뒤에 -g 옵션을 주면 된다.  npm은 install 말고도 start, owner, update, dedupe, root 등  다양한 명령어들이 존재한다.
+
+```
+npm update  : 설치한 패키지를 업데이트하는 명령어
+npm dedupe : npm으로 설치한 중복된 패키지들을 정리할 때 사용, 용량 정리에 도움
+npm root : node_modules 폴더의 위치를 알 수 있는 명령어
+npm outdated : 오래된 패키지를 색으로 표시해주는 명령어
+npm bugs : 버그가 발생했을 시 패키지를 만든 사람에게 연락을 취할지 말지 알려주는 명령어
+npm search : npm 저장소에서 패키지를 검색하는 명령어
+```
+하지만 이렇게 외부 모듈들을 설치해서 사용하다보면 필요한 패키지 수만큼 npm을 써야하고 관리하기도 번거로워질 수 있다. 그래서 ``npm init``으로 package.json 파일을 만들어서 추가적인 패키지 관리를 하면 좋다.
+
 [목록으로](#INDEX)
 
 # 참가자
 1. 지현이
-2. 최영훈
-3. 
+2. 허정민
+3. 최영훈
 4. 
 5. 
 6. 
@@ -104,5 +121,13 @@ I/O 작업을 진행하는 동안 유저 프로세스의 작업을 중단시키�
 
 [위키백과 NodeJs]( https://ko.wikipedia.org/wiki/Node.js )
 
+
+[npm 명령어](https://www.zerocho.com/category/NodeJS/post/58285e4840a6d700184ebd87)
+
+[npm 소개](https://poiemaweb.com/nodejs-npm)
+
+[npm 소개2](https://www.w3schools.com/nodejs/nodejs_npm.asp)
+
 [V8엔진](https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-v8-%EC%97%94%EC%A7%84%EC%9D%98-%EB%82%B4%EB%B6%80-%EC%B5%9C%EC%A0%81%ED%99%94%EB%90%9C-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9E%91%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-%ED%8C%81-6c6f9832c1d9)
+
 

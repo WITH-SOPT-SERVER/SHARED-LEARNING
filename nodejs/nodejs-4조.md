@@ -1,12 +1,12 @@
 # Node.js 정리 프로젝트
 
 # Index
-- [Node.js 배경](#NODE.JS-배경)
-- [Node.js 란](#NODE.JS-란)
-- [Node.js 구조](# Node.js 구조)
-- [Node.js 특징](#NODE.JS-특징)
-- [Node.js 장단점](#NODE.JS-장단점)
-- [NPM](#Node-Packaged-Manager)
+- [Node.js 배경](#node.js-배경)
+- [Node.js 란](#node.js-란)
+- [Node.js 구조](#node.js-구조)
+- [Node.js 특징](#node.js-특징)
+- [Node.js 장단점](#node.js-장단점)
+- [NPM](#node-packaged-manager)
 - [참가자](#참가자)
 
 # Node.js 배경
@@ -34,6 +34,27 @@ NodeJs는 이벤트 기반으로 개발이 가능하며 Non-Blocking I/O를 지�
 ## V8 Engine 
 
 V8 자바스크립트 엔진은 속도가 매우 빠르다는 장점과 더불어 구글이 해당 엔진을 개발하는 만큼 끊임없이 개선되고 발전할 것이다. 적극적인 개선과 발전으로 미래에 더 훌륭한 퍼포먼스를 가지게 될 것이라는 기대가 가능하다.
+
+### V8이란 무엇인가?
+
+V8은 오픈 소스이고 C++로 작성된 JavaScrpt 엔진이다. V8은 인터프리터(프로그래밍 언어의 소스 코드를 바로 실행하는 컴퓨터 프로그램 또는 환경)를 이용하는 대신 JavaScropt 코드를 좀더 효율적인 기계어 코드로 번역한다. V8은 SpiderMonkey나 Rhino 같은 많은 JavaScript 엔진처럼 JLT(Just-In-Time) 컴파일러를 적용하여 JavaScript 코드를 실행할 때 컴파일하여 기계어 코드로 만든다. V8의 가장 큰 차이는 바이트코드 또는 다른 중간 코드를 생성하지 않는 다는 것이다.
+
+V8엔진은 다음과 같이 최적화된 코드를 생성한다.
+
+### 인라이닝
+
+![인라이닝](https://t1.daumcdn.net/cfile/tistory/9943DA425AA4EC1619)
+
+첫 번째 최적화는 미리 가능한 많은 코드를 인라이닝(inlining) 하는것이다. 인라이닝은 호출 지점(함수가 호출된 곳의 코드 위치)을 호출된 함수의 내용으로 변환하는 과정이다. 
+
+### 히든클래스 
+
+V8은 히든클래스를 생성하여 프로퍼티 접근 시간을 줄일 수 있다.
+다른 JavaScript Engine이 프로퍼티를 저장 하기 위해서 사전식 데이터 구조를 이용하지만, V8은 hidden class를 이용한다. 이 둘의 차이는 단순하게 이야기 해서 해싱과 포인터의 차이라고 할 수 있다.
+
+V8은 객체에 프로퍼티를 추가할 때 히든 클래스를 생성하고, 히든 클래스에 프로퍼티의 정적인 위치를 저장함으로써 실제 데이터가 저장되어 있는 위치에 대한 Pointer를 제공한다. 
+매번 프로퍼티를 추가할 때 마다 새로운 히든클래스를 생성하는 방식은 상당히 비효율 적이지만, 다음 번에 같은 객체를 생성할 때 이전에 생성했던 히든클래스를 재사용 함으로써 객체 생성 비용을 줄일 수 있다.
+
 
 ## Non-Blocking I/O
 
@@ -65,7 +86,7 @@ I/O 작업을 진행하는 동안 유저 프로세스의 작업을 중단시키�
 
 # 참가자
 1. 지현이
-2. 
+2. 최영훈
 3. 
 4. 
 5. 
@@ -82,3 +103,6 @@ I/O 작업을 진행하는 동안 유저 프로세스의 작업을 중단시키�
 [non-blocking I/O](https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.html )
 
 [위키백과 NodeJs]( https://ko.wikipedia.org/wiki/Node.js )
+
+[V8엔진](https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-v8-%EC%97%94%EC%A7%84%EC%9D%98-%EB%82%B4%EB%B6%80-%EC%B5%9C%EC%A0%81%ED%99%94%EB%90%9C-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9E%91%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-%ED%8C%81-6c6f9832c1d9)
+

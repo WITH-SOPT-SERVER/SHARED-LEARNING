@@ -21,6 +21,17 @@
 [목록으로](#INDEX)
 
 # Node.js 개념
+Node.js는 브라우저에서만 실행되었던 자바스크립트를 독립형 응용 프로그램으로 실행시킬 수 있도록 확장한 것이다.
+
+
+**Node.js는 Event-Driven 방식으로써, 비동기 방식으로 동작한다. Node.js는 Chrome의 Javascript Engine에서 Runtime Build가 된 후 동작한다. Node.js에는 NPM이라는 오픈소스 라이브러리가 있다.**
+- 자바스크립트를 통해 웹사이트보다 많은 기능들을 할 수 있게 되었다.
+- 자바스크립트가 다른 스크립트 언어들(ex, Python…)과 같이 많은 기능을 할 수 있게 되었다.
+- V8 자바스크립트 엔진이 Node.js 코드를 기계코드로 번역해 줌으로써, 컴퓨터가 해독(interpret) 없이 실행할 수 있게 된다.
+
+
+(출처: http://cosmiclatte.co.kr/node-js%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90/)
+
 
 [목록으로](#INDEX)
 

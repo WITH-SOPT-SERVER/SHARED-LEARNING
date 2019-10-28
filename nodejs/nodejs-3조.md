@@ -26,6 +26,67 @@
 
 # Node.js 구조
 
+### Node.js 시스템 구조 / 내부구조 
+
+![node js 시스템 구조에 대한 이미지 검색결과](https://wckhg89.github.io/images/20160929_node_arch.jpg)
+
+[출처]  https://wckhg89.github.io/images/20160929_node_arch.jpg
+
+
+
+#### 가장 아래 빨간 부분 
+
+> node.js는 구글 V8 자바스크립으 엔진을 기본으로 한다. 이를 기반으로 Single-thread 기반의 Event Loop (libev)가 돌면서 요청을 처리한다. 그림을 보면 Thread Pool (libeio)를 볼 수 있다. 이는 시스템적으로 non-blocking IO를 지원하지 않는 IO 호출이 있는 경우, 이를 비동기 처리 하기 위해 내부의 Thread Pool을 별도 이용하여 차리하도록 되어 있다.
+
+
+
+#### 중간 파란 부분 
+
+> 이 영역은 네트워크 프로토콜 (http …)을 처리하는 socket, http 바인딩 모듈등이 있다.
+
+
+
+#### 맨위 오렌지 부분 
+
+>  노드 JS의 기본 라이브러리를 말합니다. 노드에서 기본적으로 제공하는 라이브러리(모듈)에는 HTTP, TCP, FS, OS, EVENT 모듈 등이 있다. 노드 기본 라이브러리는 require를 할때에 별도의 경로 지정없이 사용할 수 있다. 
+
+
+
+### Event Loop 구조 
+
+
+이벤트 루프는 가능하다면 언제나 **시스템 커널에 작업을 넘겨서** Node.js가 **none-blocking I/O 작업을 수행**하도록 해준다.
+
+
+
+대부분의 현대 커널은 **멀티 스레드**이므로 백그라운드에서 다수의 작업을 실행할 수 있습니다. 이러한 작업 중 하나가 완료되면 **커널이 Node.js에게 알려주어 콜백 함수를 poll 큐에 추가**할 수 있게 하여 동시성 있게 처리하도록 합니다. 
+
+
+
+![img](https://t1.daumcdn.net/cfile/tistory/998056375ABE334D19)
+
+[출처] https://psyhm.tistory.com/9
+
+
+
+#### 이벤트 루프의 작업순서
+
+- **Timers**: 이 단계는 setTimeout()과 setInterval()로 스케줄링한 콜백 실행
+
+- **I/O callbacks**: 클로즈 콜백, 타이버로 스케줄링된 콜백, setImmediate()를 제외한 거의 모든 콜백을 실행
+
+- **Idle, prepare**: 내부용으로만 사용
+
+- **Poll**: 새로운 I/O 이벤트를 가져오며 node는 이곳에서 적절한 시기에 block 한다. 
+
+- **Check**: setImmediate() 콜백은 여기서 호출됩니다.
+
+- **Close callbacks**
+
+  
+
+>  이벤트 루프는 이 모든 큐 들에 존재하는 작업들을 순차적으로 처리함으로써 비즈니스 로직을 수행한다.
+
 [목록으로](#INDEX)
 
 # Node.js 특징
@@ -100,7 +161,7 @@ registry에 있는 package 객체들은 업데이트된 package가 있는 웹사
 
 # 참가자
 1. 김강희 - NPM 개념
-2. 
+2. 김채린 - Node.js 구조
 3. 
 4. 
 5. 

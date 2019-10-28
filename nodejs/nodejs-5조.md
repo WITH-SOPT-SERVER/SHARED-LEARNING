@@ -7,12 +7,12 @@
 > 내용의 출처 링크를 꼭 남겨주세요!!
 
 # Index
-- [Node.js 배경](#NODE.JS-배경)
-- [Node.js 란](#NODE.JS-란)
-- [Node.js 구조](#NODE.JS-구조)
-- [Node.js 특징](#NODE.JS-특징)
-- [Node.js 장단점](#NODE.JS-장단점)
-- [NPM](#Node-Packaged-Manager)
+- [Node.js 배경](#node.js-배경)
+- [Node.js 란](#node.js-란)
+- [Node.js 구조](#node.js-구조)
+- [Node.js 특징](#node.js-특징)
+- [Node.js 장단점](#node.js-장단점)
+- [NPM](#node-packaged-manager)
 - (자유롭게 추가 가능)
 - [참가자](#참가자)
 
@@ -31,7 +31,6 @@ Node.js는 브라우저에서만 실행되었던 자바스크립트를 독립형
 
 
 (출처: http://cosmiclatte.co.kr/node-js%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90/)
-
 
 [목록으로](#INDEX)
 
@@ -81,7 +80,6 @@ node.js 의 비동기 I/O 를 지원하는 멀티스레드 플랫폼이자 라�
 2 싱글 스레드 : 비동기 프로그래밍이다. 두 번째 세미나에서 배웠던 내용들 !
 3 범용성 : Nodj.js의 기반인 자바스크립트를 이용하면 프론트도 다룰 수 있고 V8 엔진 덕에 다른 프로그래밍에서도 사용할 수 있다.
 4 구글이 제작 : 아무래도 당분간은 강세가 지속될 듯.
-
 
 ## Node.js의 단점
 

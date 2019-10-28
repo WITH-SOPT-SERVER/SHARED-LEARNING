@@ -7,12 +7,12 @@
 > 내용의 출처 링크를 꼭 남겨주세요!!
 
 # Index
-- [Node.js 배경](#NODE.JS-배경)
-- [Node.js 란](#NODE.JS-란)
-- [Node.js 구조](#NODE.JS-구조)
-- [Node.js 특징](#NODE.JS-특징)
-- [Node.js 장단점](#NODE.JS-장단점)
-- [NPM](#Node-Packaged-Manager)
+- [Node.js 배경](#node.js-배경)
+- [Node.js 란](#node.js-란)
+- [Node.js 구조](#node.js-구조)
+- [Node.js 특징](#node.js-특징)
+- [Node.js 장단점](#node.js-장단점)
+- [NPM](#node-packaged-manager)
 - (자유롭게 추가 가능)
 - [참가자](#참가자)
 
@@ -21,6 +21,16 @@
 [목록으로](#INDEX)
 
 # Node.js 개념
+Node.js는 브라우저에서만 실행되었던 자바스크립트를 독립형 응용 프로그램으로 실행시킬 수 있도록 확장한 것이다.
+
+
+**Node.js는 Event-Driven 방식으로써, 비동기 방식으로 동작한다. Node.js는 Chrome의 Javascript Engine에서 Runtime Build가 된 후 동작한다. Node.js에는 NPM이라는 오픈소스 라이브러리가 있다.**
+- 자바스크립트를 통해 웹사이트보다 많은 기능들을 할 수 있게 되었다.
+- 자바스크립트가 다른 스크립트 언어들(ex, Python…)과 같이 많은 기능을 할 수 있게 되었다.
+- V8 자바스크립트 엔진이 Node.js 코드를 기계코드로 번역해 줌으로써, 컴퓨터가 해독(interpret) 없이 실행할 수 있게 된다.
+
+
+(출처: http://cosmiclatte.co.kr/node-js%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90/)
 
 [목록으로](#INDEX)
 
@@ -65,8 +75,19 @@ node.js 의 비동기 I/O 를 지원하는 멀티스레드 플랫폼이자 라�
 # Node.js의 장단점
 
 ## Node.js의 장점
+ 
+1 이벤트 기반.
+2 싱글 스레드 : 비동기 프로그래밍이다. 두 번째 세미나에서 배웠던 내용들 !
+3 범용성 : Nodj.js의 기반인 자바스크립트를 이용하면 프론트도 다룰 수 있고 V8 엔진 덕에 다른 프로그래밍에서도 사용할 수 있다.
+4 구글이 제작 : 아무래도 당분간은 강세가 지속될 듯.
 
 ## Node.js의 단점
+
+1 싱글스레드 : 하나의 작업 자체가 오래 걸린다면 전체적인 과부하가 걸릴 수 있다, 멀티코어의 CPU 사용을 최적화할 수 없다.
+2 스크립트 언어이기에 오류의 탐색이 신뢰롭지 못할 수 있다.
+3 V8이 좋지만 low level 언어로 구성된 서버 어플리케이션보다는 느리다.
+
+출처 : https://epdl-studio.tistory.com/76, https://goodgid.github.io/Node-Pros-and-Cons/
 
 [목록으로](#INDEX)
 
@@ -76,8 +97,8 @@ node.js 의 비동기 I/O 를 지원하는 멀티스레드 플랫폼이자 라�
 
 # 참가자
 1. 김해리 - node.js의 구조
-2. 
-3. 
+2. 박승완 - node.js의 장단점
+3. 제갈윤 - node.js의 개념
 4. 
 5. 
 6. 

@@ -30,13 +30,18 @@ Wiki를 이용해서 만들 수 도 있지만 git의 commit의 익숙해지기 �
 
 # 최상위 개념
 
--   [마크다운](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/MarkDown.md)
--   [자바스크립트](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/Javascript.md)
+- [마크다운](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/MarkDown.md)
+- [자바스크립트](https://github.com/WITH-SOPT-SERVER/SHARED-LEARNING/blob/master/Javascript.md)
+- [Postman 자동화](./PostmanTestsScript.md)
+- [HTTP](./http.md)
 
 # 참가자
 
-- 허정민
 - 윤희성
+- 박주연
+- 손예지
+- 김해리
+- 허정민
 - 유희수
 - 박승완
 - 황채연
@@ -69,4 +74,5 @@ Wiki를 이용해서 만들 수 도 있지만 git의 commit의 익숙해지기 �
 - 박형모
 - 심다은
 - 이호진
-
+- 제갈윤
+- 이재용

@@ -1,19 +1,30 @@
 # Node.js 정리 프로젝트
 
+
 # Index
-- [Node.js 배경](#NODE.JS-배경)
-- [Node.js 란](#NODE.JS-란)
-- [Node.js 구조](#NODE.JS-구조)
-- [Node.js 특징](#NODE.JS-특징)
-- [Node.js 장단점](#NODE.JS-장단점)
-- [NPM](#Node-Packaged-Manager)
+- [Node.js 배경](#node.js-배경)
+- [Node.js 란](#node.js-개념)
+- [Node.js 구조](#node.js-구조)
+- [Node.js 특징](#node.js-특징)
+- [Node.js 장단점](#node.js-장단점)
+- [NPM](#node-packaged-manager)
 - [참가자](#참가자)
 
 # Node.js 배경
 
+자바스크립트의 활용도가 높아지자, 웹 브라우저 바깥에서 자바스크립트를 이용하려는 움직임이 생겼다.
+2008년 9월 구글은 크롬 웹 브라우저의 베타버전을 발표하는데, 여기에 탑재된 V8 javascript 엔진은 C++로 개발되었으며 이전에 개발된 어떠한 자바스크립트 엔진보다 속도가 빨랐다. 또한 크롬 웹 브라우저 코드를 오픈소스화 하면서 V8자바스크립트 엔진의 코드가 공개되었다는 것이 굉장히 매력적인 상황으로 다가왔다.
+이러한 상황 덕분에 기존의 서버 환경에서 이용하던 자바스크립트(LiveWire나 Jaxer)의 단점이었던 '속도' 부분을 향상시킬 수 있게 되었다.
+2009년 1월부터 자바스크립트를 웹 브라우저가 아닌 곳에서 사용할 수 있게 표준을 만들자는 의견이 많아졌고, 현재 CommonJS프로젝트로 알려진 ServerJS프로젝트가 시작되었다. CommonJS 표준 발표 이후 곧바로 라이언달은 CommonJS표준과 V8 자바스크립트 엔진을 기반으로 Node.js를 개발했다.
+
+출처: (https://zbulletjournal.tistory.com/85)
+
 [목록으로](#INDEX)
 
 # Node.js 개념
+
+Node.js란 오픈소스, 크로스 플랫폼, 자바스크립트 런타임 환경이라고 정의한다. 자바스크립트는 기본적으로 브라우저에서 동작되는 언어였는데, 런타임 환경은 자바스크립트를 브라우저 바깥에서 실행할 수 있는 것이다.
+
 - Node.js는 크롬 V8 자바스크립트 엔진으로 빌드된 자바스크립트 런타임으로, 이벤트 기반, 논블로킹 I/O 모델을 사용해 가볍고 효율적이다.
 - Node.js의 패키지 생태계인 npm은 세계에서 가장 큰 오픈 소스 라이브러리 생태계이다.
 
@@ -59,6 +70,7 @@
 [목록으로](#INDEX)
 
 # Node Packaged Manager
+
 npm은 node package manager의 약자로, 앞서 설며한 모듈들에 대한 설치 및 의존성을 관리해 주는 도구이다. 마치 Linux의 rpm이나 Python의 pip 처럼 설치를 하면, repository에서 해당 모듈을 읽어다가 설치를 해주며, java의 maven처럼 package.json 이라는 파일에 (pom.xml과 비슷한 역할을 함) module간의 dependency (의존성)에 따라서 의존성이 있는 모듈을 같이 설치한다.
 
 *주요 명령어*
@@ -79,7 +91,8 @@ npm은 node package manager의 약자로, 앞서 설며한 모듈들에 대한 �
 [목록으로](#INDEX)
 
 # 참가자
-1. 이시연
+1. 양정훈
+2. 이시연
 2. 
 3. 
 4. 

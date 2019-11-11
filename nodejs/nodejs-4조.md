@@ -75,6 +75,12 @@ I/O 작업을 진행하는 동안 유저 프로세스의 작업을 중단시키�
 
 ## Node.js의 장점
 
+1. 자바스크립트를 사용한다. 모든 웹 개발자는 자바스크립트를 알고 있다. 따라서 모든 웹 개발자가 쉽게 접근할 수 있다.
+2. 구글이 만드는 V8 자바스크립트 엔진을 사용한다. Node.js는 구글이 무너지지 않는 한 계속 빨라질 것이다.
+3. Node.js는 Non-blocking I/O와 단일 스레드 이벤트 루프를 통한 높은 Request 처리 성능을 가지고 있다. 데이터베이스로부터 대량의 데이터를 취득하여 웹페이지에 표시하는 처리의 경우, 일반적으로 데이터베이스 처리에 대기시간(blocking)이 발생하기 때문에 웹페이지 표시가 지연되는 현상이 발생한다.
+
+Non-blocking I/O는 비동기 처리를 실시하므로 데이터베이스 처리와 웹페이지 표시를 별도 진행하여 스트레스없이 웹페이지 표시가 기능하다.
+
 ## Node.js의 단점
 
  NodeJs는 자바스크립트와  싱글 쓰레드 모델에서 오는 장점이 있는 반면 여기서 오는 단점 역시 만만하지 않다. 기본적으로 싱글 쓰레드 모델이기 때문에, 하나의 작업 자체가 시간이 많이 걸리면, 전체 시스템의 성능이 아주 급격하게 떨어진다. 그래서, 가벼운 작업 위주로 개발이 되어야 하고, 자바스크립트에서 오는 문제점은 자바나 다른 언어에 비해서 명시성이 떨어지기 때문에, 코드의 가독성이 자바언어에 비해서 상대적으로 낮기 때문에 유지 보수가 어려워질 수 있다 또한 이벤트 Call back 을 형태를 기준으로 하기 때문에, 이러한 call back이 중첩될 경우 (이를 callback hell이라고 한다.) 코드의 가독성이 급격하게 떨어진다.
@@ -105,7 +111,7 @@ npm search : npm 저장소에서 패키지를 검색하는 명령어
 1. 지현이
 2. 허정민
 3. 최영훈
-4. 
+4. 이재용
 5. 
 6. 
 7. 
@@ -119,8 +125,9 @@ npm search : npm 저장소에서 패키지를 검색하는 명령어
 
 [non-blocking I/O](https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.html )
 
-[위키백과 NodeJs]( https://ko.wikipedia.org/wiki/Node.js )
+[nodejs 장단점](https://zbulletjournal.tistory.com/85)
 
+[위키백과 NodeJs](https://ko.wikipedia.org/wiki/Node.js )
 
 [npm 명령어](https://www.zerocho.com/category/NodeJS/post/58285e4840a6d700184ebd87)
 

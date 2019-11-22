@@ -24,7 +24,25 @@ NodeJs는 이벤트 기반으로 개발이 가능하며 Non-Blocking I/O를 지�
 
 # Node.js 구조
 
-[목록으로](#INDEX)
+![node.js구조](https://t1.daumcdn.net/cfile/tistory/995D0F3B5ABE2B0405)
+
+Node.js는 **binding API(C++ Addon)**를 활용해 **libuv**과 연결되며 I/O 작업을 **동기식**으로 libuv가 처리한 뒤 I/O 작업이 끝나면 **콜백함수**가 처리되는 것이다.
+
+**I/O 작업**은 네트워크, 파일 시스템, 프로세스 등이 있다.
+여러 Thread를 사용하기 때문에 I/O 작업이 많은 곳에서 Node.js가 활용이 좋다.
+
+출처: [https://psyhm.tistory.com/9]
+
+## libuv
+
+Node.js의 또 하나의 중요한 의존성은 **libuv**이다. libuv는 **C 라이브러리로 논블로킹 I/O 작업을 지원하는 모든 플랫폼에서 일관된 인터페이스로 추상화**하는 데 사용됩니다. 
+
+libuv는 파일 시스템, DNS, 네트워크, 자식 프로세스, 파이프, 신호 처리, 폴링, 스트리밍을 다루는 메커니즘을 제공하고 운영체제 수준에서 비동기로 처리될 수 없는 작업을 위한 스레드 풀도 포함하고 있습니다.
+
+출처: [https://nodejs.org/ko/docs/meta/topics/dependencies/#libuv]
+
+
+[목록으로](#index)
 
 # Node.js 특징
 
@@ -112,7 +130,7 @@ npm search : npm 저장소에서 패키지를 검색하는 명령어
 2. 허정민
 3. 최영훈
 4. 이재용
-5. 
+5. 이소희
 6. 
 7. 
 8. 

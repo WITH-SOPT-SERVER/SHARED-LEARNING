@@ -349,7 +349,7 @@ npm install '모듈 이름'
 3. 김민준 - Node.js 장점 및 단점 
 4. 이소연 - Node.js 특징
 5. 유희수 - Node.js 개념
-6. 
+6. 조수민 - NPM 개념
 7. 
 8. 
 

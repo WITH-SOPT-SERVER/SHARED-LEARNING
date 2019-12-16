@@ -1,4 +1,4 @@
-# Node.js 정리 프로젝트
+﻿# Node.js 정리 프로젝트
 
 # Index
 - [Node.js 배경](#NODE.JS-배경)
@@ -7,7 +7,7 @@
 - [Node.js 특징](#NODE.JS-특징)
 - [Node.js 장단점](#NODE.JS-장단점)
 - [NPM](#Node-Packaged-Manager)
-- (자유롭게 추가 가능)
+- [참고자료]
 - [참가자](#참가자)
 
 # Node.js 배경
@@ -18,6 +18,7 @@
 [목록으로](#INDEX)
 
 # Node.js 개념
+Node.JS는 Chrome V8 JavaScript엔진으로 빌드된 런타임(RunTime)환경이다. 이벤트 기반, 논블로킹 I/O 모델을 사용해 가볍고 효율적이며, Node.js의 생태계인 npm이나 yarn은 세계에서 가장 큰 오픈 소스 라이브러리 생태계이다.
 
 [목록으로](#INDEX)
 
@@ -37,6 +38,9 @@
 - 지속적으로 성장하는 모듈들의 레포지토리
 - 유용한 커뮤니티
 - 모듈 기반의 npm 패키지 관리자
+
+## 4. 동시성
+- 동시성 은 흐름을 실행시키는 것은 하나이지만 timeslicing, time-quantum등으로 작은 단위로 나누어서 흐름을 돌아가면서 동시에 일어나는 것처럼 만들어 주는 방식
 
 ## Single Thread
 
@@ -66,7 +70,18 @@
 
 ## Node.js의 장점
 
+##1. 비동기 방식 -> 빠르다.
+Read/Write 이벤트가 시작하자 마자 모듈을 변환시켜 다른 작업을 하도록 준비상태가 되기 때문에, 대기시간을 최소화하고 퍼포먼스를 향상시킨다.
+## 2. 싱글 쓰레드 -> 적은 양의 자원으로 일을 처리하는 것이 가능하다.
+## 3.이벤트 기반 -> 자원을 최소화 할 수 있다.
+대부분의 웹 서버는 사용자가 이벤트를 발생시킬 때 까지를 기다리면서 자원을 계속 소비하지만, 이벤트 기반 처리 방식은 발생한 이벤트에 대해서만 웹서버가 '연결'을 해주기 때문에 자원을 아낄 수 있다.
+
 ## Node.js의 단점
+
+## 1. 싱글 쓰레드 -> 하나의 작업이 오래 걸리면 시스템 전체의 성능이 떨어진다.
+## 2. 이벤트 기반 -> 이벤트 콜백 중심으로 코드가 중첩이 되기 때문에, 가독성과 유지보수가 힘들다. 예)콜벡헬(Callback hell)
+## 3. 클라이언트와 서버에서의 언어가 동일하다. 
+즉, 다른 파트원끼리 같은 언어를 사용하기 때문에 이해력/가독성 면에서 이점이 많다.
 
 [목록으로](#INDEX)
 
@@ -74,9 +89,17 @@
 
 [목록으로](#INDEX)
 
+# 참고자료
+https://joshua1988.github.io/web-development/translation/javascript/how-js-works-inside-engine/
+https://asfirstalways.tistory.com/43
+https://epdl-studio.tistory.com/76
+https://ooeunz.tistory.com/2?category=813312
+
+[목록으로](#INDEX)
+
 # 참가자
 1. 남궁권
-2. 
+2. 조하담
 3. 
 4. 
 5. 
